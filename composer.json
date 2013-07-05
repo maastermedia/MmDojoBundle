@@ -1,14 +1,18 @@
 {
-    "name": "maastermedia/dojo-bundle",
+    "name": "josch1710/dojo-bundle",
     "type": "symfony-bundle",
     "description": "Symfony bundle for Dojo Toolkit JavaScript library (toolkit)",
     "keywords": ["symfony", "dojo", "dojo toolkit", "javascript"],
-    "homepage": "http://github.com/maastermedia/DojoBundle",
+    "homepage": "http://github.com/josch1710/MmDojoBundle",
     "license": "MIT",
     "authors": [
         {
             "name": "Peter Kokot",
             "email": "peter.kokot@m-m.si"
+        },
+        {
+            "name": "Jochen Schäfer",
+            "email": "josch1710@live.de"
         }
     ],
     "autoload": {
