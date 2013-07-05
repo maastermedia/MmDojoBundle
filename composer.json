@@ -15,7 +15,7 @@
             "email": "josch1710@live.de"
         }
     ],
-    "repositories": {
+    "repositories": [{
         "type": "package",
         "target-dir": "Resources/public/js",
         "package": {
@@ -30,13 +30,13 @@
                 "type": "zip"
             }
         }
-    },
+    }],
     "autoload": {
         "psr-0": { "Dojo\\DojoBundle": "" }
     },
     "require": {
         "symfony/framework-bundle": "2.1.*",
-        "dojo/dojo": "1.9.1"
+        "dojo/dojo": "1.9.*"
     },
     "target-dir": "Dojo/DojoBundle"
 }
