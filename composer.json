@@ -15,11 +15,28 @@
             "email": "josch1710@live.de"
         }
     ],
+    "repositories": {
+        "type": "package",
+        "target-dir": "Resources/public/js",
+        "package": {
+            "name": "dojo/dojo",
+            "version": "1.9.1",
+            "dist": {
+                "url": "http://download.dojotoolkit.org/release-1.9.1/dojo-release-1.9.1.zip",
+                "type": "zip"
+            },
+            "source": {
+                "url": "http://download.dojotoolkit.org/release-1.9.1/dojo-release-1.9.1-src.zip",
+                "type": "zip"
+            }
+        }
+    },
     "autoload": {
         "psr-0": { "Dojo\\DojoBundle": "" }
     },
     "require": {
-        "symfony/framework-bundle": "2.1.*"
+        "symfony/framework-bundle": "2.1.*",
+        "dojo/dojo": "1.9.*"
     },
     "target-dir": "Dojo/DojoBundle"
 }
