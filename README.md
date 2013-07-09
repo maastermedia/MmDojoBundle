@@ -12,4 +12,4 @@ Features:
 
 ## Documentation
 
-Documentation can be found in `Resources/doc/index.md`
+Documentation can be found in [Docs](Resources/doc/index.md)
