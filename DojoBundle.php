@@ -4,6 +4,4 @@ namespace Dojo\DojoBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class DojoDojoBundle extends Bundle
-{
-}
+class DojoBundle extends Bundle {}

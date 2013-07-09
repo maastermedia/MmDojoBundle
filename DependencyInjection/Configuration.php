@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dojo_dojo');
+        $rootNode = $treeBuilder->root('dojo');
         
         $rootNode
             ->children()
@@ -34,7 +34,7 @@ class Configuration implements ConfigurationInterface
 						->booleanNode('cacheBust')->defaultFalse()->end()
 						->scalarNode('baseUrl')->defaultValue('')->end()
 						->scalarNode('locale')->defaultValue('en-gb')->end()
-						->arrayNode('packages')->prototype('array')->children()
+						->arrayNode('packages')->canBeUnset()->prototype('array')->children()
 							->scalarNode('name')->isRequired()->end()
 							->scalarNode('location')->isRequired()->end()
 						->end()

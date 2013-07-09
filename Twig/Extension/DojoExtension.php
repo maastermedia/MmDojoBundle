@@ -26,7 +26,7 @@ class DojoExtension extends \Twig_Extension
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-		// If request scope is not active, e.g. on the console, then set one
+		// If request scope is not active, e.g. on the console, set one
 		if (!$this->getContainer()->isScopeActive('request')) {
 			$this->getContainer()->enterScope('request');
 			$this->getContainer()->set('request', new \Symfony\Component\HttpFoundation\Request(), 'request');
@@ -84,7 +84,7 @@ class DojoExtension extends \Twig_Extension
      */
     public function renderDojoConfig()
     {
-        return ($this->getContainer()->get('templating')->render('DojoDojoBundle::config.html.twig', array(
+        return ($this->getContainer()->get('templating')->render('DojoBundle::config.html.twig', array(
             'dojo_config' => $this->config
         )));
     }

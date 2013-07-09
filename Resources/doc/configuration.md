@@ -8,11 +8,12 @@ dojo:
         async: true
         parseOnLoad: true
         isDebug: false
+        baseUrl: bundles/dojodojo/js/sources/dojo
         locale: de-de
         packages:
             -
-              name: X
-              location: <route_to_x>
+              name: x
+              location: <asset_path_to_x>
     theme: claro
 ```
 
@@ -21,3 +22,4 @@ Twig functions:
 
 Twig globals:
 - dojo_theme
+- dojo_baseUrl, if baseUrl was configured 
