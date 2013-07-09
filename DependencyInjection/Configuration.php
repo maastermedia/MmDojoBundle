@@ -20,19 +20,26 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dojo');
+        $rootNode = $treeBuilder->root('dojo_dojo');
         
         $rootNode
             ->children()
+                ->scalarNode('theme')->defaultValue('claro')->end()
                 ->arrayNode('dojo_config')
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->booleanNode('async')->defaultTrue()->end()
                         ->booleanNode('parseOnLoad')->defaultTrue()->end()
                         ->booleanNode('isDebug')->defaultFalse()->end()
+						->booleanNode('cacheBust')->defaultFalse()->end()
+						->scalarNode('baseUrl')->defaultValue('')->end()
+						->scalarNode('locale')->defaultValue('en-gb')->end()
+						->arrayNode('packages')->prototype('array')->children()
+							->scalarNode('name')->isRequired()->end()
+							->scalarNode('location')->isRequired()->end()
+						->end()
                     ->end()
                 ->end()
-                ->scalarNode('theme')->defaultValue('claro')->end()
             ->end()
         ;
 

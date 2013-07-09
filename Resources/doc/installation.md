@@ -42,20 +42,12 @@ git submodule update --init
 Next, be sure to enable Dojo bundle in your autoload.php and AppKernel.php files:
 
 ``` php
-<?php
-// app/autoload.php
-$loader->registerNamespaces(array(
-    // ...
-    'Dojo' => __DIR__.'/../vendor/bundles',
-    // ...
-));
-
 // app/AppKernel.php
 public function registerBundles()
 {
     return array(
         // ...
-        new Dojo\DojoBundle\DojoBundle(),
+        new Dojo\DojoBundle\MmDojoBundle(),
         // ...
     );
 }

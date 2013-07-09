@@ -8,6 +8,11 @@ dojo:
         async: true
         parseOnLoad: true
         isDebug: false
+        locale: de-de
+        packages:
+            -
+              name: X
+              location: <route_to_x>
     theme: claro
 ```
 

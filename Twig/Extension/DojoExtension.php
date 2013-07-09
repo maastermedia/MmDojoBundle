@@ -21,11 +21,36 @@ class DojoExtension extends \Twig_Extension
      *
      * @var ContainerInterface
      */
-    protected $container;
+    protected $container, $config;
 
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
+		// If request scope is not active, e.g. on the console, then set one
+		if (!$this->getContainer()->isScopeActive('request')) {
+			$this->getContainer()->enterScope('request');
+			$this->getContainer()->set('request', new \Symfony\Component\HttpFoundation\Request(), 'request');
+		}
+		// Getting the path through the asset interface
+		$this->config = $this->container->getParameter('dojo_config');
+		if (isset($this->config['packages']) && !empty($this->config['packages'])) {
+			$helper = $this->container->get('templating.helper.assets');
+			foreach($this->config['packages'] as $i => $package) {
+				$this->config['packages'][$i]['location'] 
+					= $helper->getUrl($package['location'], null);
+			}
+		} 
+		if (isset($this->config['baseUrl'])) {
+			// Unsetting baseUrl if empty
+			if (empty($this->config['baseUrl'])) {
+				unset($this->config['baseUrl']);
+			} else {
+				// Getting path through the asset interface
+				$helper = $this->container->get('templating.helper.assets');
+				$this->config['baseUrl'] = $helper->getUrl($this->config['baseUrl'], null);
+				
+			}
+		}
     }
 
     /*
@@ -38,9 +63,13 @@ class DojoExtension extends \Twig_Extension
     
     public function getGlobals()
     {
-        return array(
+        $globals = array(
             'dojo_theme' => $this->getContainer()->getParameter('dojo_theme'),
         );
+		if (isset($this->config['baseUrl'])) {
+			$globals['dojo_baseUrl'] = $this->config['baseUrl'];
+		}
+		return $globals;
     }
     
     public function getFunctions()
@@ -55,8 +84,8 @@ class DojoExtension extends \Twig_Extension
      */
     public function renderDojoConfig()
     {
-        return ($this->getContainer()->get('templating')->render('DojoBundle::config.html.twig', array(
-            'dojo_config' => $this->getContainer()->getParameter('dojo_config')
+        return ($this->getContainer()->get('templating')->render('DojoDojoBundle::config.html.twig', array(
+            'dojo_config' => $this->config
         )));
     }
     
