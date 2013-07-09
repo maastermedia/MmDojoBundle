@@ -47,7 +47,7 @@ public function registerBundles()
 {
     return array(
         // ...
-        new Dojo\DojoBundle\MmDojoBundle(),
+        new Dojo\DojoBundle\DojoBundle(),
         // ...
     );
 }

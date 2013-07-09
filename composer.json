@@ -1,5 +1,5 @@
 {
-    "name": "josch1710/dojo-bundle",
+    "name": "maastermedia/dojo-bundle",
     "type": "symfony-bundle",
     "description": "Symfony bundle for Dojo Toolkit JavaScript library (toolkit)",
     "keywords": ["symfony", "dojo", "dojo toolkit", "javascript"],

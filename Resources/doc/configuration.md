@@ -8,7 +8,7 @@ dojo:
         async: true
         parseOnLoad: true
         isDebug: false
-        baseUrl: bundles/dojodojo/js/sources/dojo
+        baseUrl: bundles/dojo/js/sources/dojo
         locale: de-de
         packages:
             -
