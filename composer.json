@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony bundle for Dojo Toolkit JavaScript library (toolkit)",
     "keywords": ["symfony", "dojo", "dojo toolkit", "javascript"],
-    "homepage": "http://github.com/josch1710/MmDojoBundle",
+    "homepage": "http://github.com/maastermedia/MmDojoBundle",
     "license": "MIT",
     "authors": [
         {
