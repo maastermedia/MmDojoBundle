@@ -3,19 +3,24 @@
     "type": "symfony-bundle",
     "description": "Symfony bundle for Dojo Toolkit JavaScript library (toolkit)",
     "keywords": ["symfony", "dojo", "dojo toolkit", "javascript"],
-    "homepage": "http://github.com/maastermedia/DojoBundle",
+    "homepage": "http://github.com/maastermedia/MmDojoBundle",
     "license": "MIT",
     "authors": [
         {
             "name": "Peter Kokot",
             "email": "peter.kokot@m-m.si"
+        },
+        {
+            "name": "Jochen Schäfer",
+            "email": "josch1710@live.de"
         }
     ],
     "autoload": {
         "psr-0": { "Dojo\\DojoBundle": "" }
     },
     "require": {
-        "symfony/framework-bundle": "2.1.*"
+        "symfony/framework-bundle": "2.1.*",
+        "dojo/dojo": "1.9.*"
     },
     "target-dir": "Dojo/DojoBundle"
 }
