@@ -4,3 +4,14 @@ services:
         arguments: [@service_container]
         tags:
             - { name: twig.extension, alias: dojo }
+    assetic.value_supplier.dojo:
+        class: Dojo\DojoBundle\Twig\Extension\DojoValueSupplier
+        arguments: [@service_container]
+        public: false
+    assetic.value_supplier:
+        alias: assetic.value_supplier.dojo
+        public: false
+    assetic.filter.dojo:
+        class: Dojo\DojoBundle\Twig\Extension\DojoCssRewriteFilter
+        tags:
+            - { name: assetic.filter, alias: dojocssrewrite }
