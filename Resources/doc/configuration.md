@@ -54,5 +54,7 @@ You can now use the variable in your twig template like this, e.g. stylesheets:
 If you want to use css rewriting, you *have* to use the `dojocssrewrite` filter,
 because the standard `cssrewrite` filter doesn't know the assetic variables.
 
+*Important*: You can *not* use the @Bundle notation with Assetic variables.
+
 After all is setup or if some templates are changed,
 you need to dump the assets with the `console assetic:dump` command.
