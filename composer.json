@@ -19,7 +19,7 @@
         "psr-0": { "Dojo\\DojoBundle": "" }
     },
     "require": {
-        "symfony/framework-bundle": "2.1.*",
+        "symfony/framework-bundle": "2.3.*",
         "dojo/dojo": "1.9.*"
     },
     "target-dir": "Dojo/DojoBundle"
