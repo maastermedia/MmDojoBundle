@@ -1,7 +1,7 @@
 MmDojoBundle
 ============
 
-[![Build Status](https://secure.travis-ci.org/maastermedia/DojoBundle.png?branch=master)](http://travis-ci.org/maastermedia/DojoBundle)
+[![Build Status](https://secure.travis-ci.org/maastermedia/MmDojoBundle.png?branch=master)](http://travis-ci.org/maastermedia/MmDojoBundle)
 
 Symfony2 bundle for Dojo Toolkit Javascript library (toolkit).
 
