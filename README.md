@@ -13,3 +13,11 @@ Features:
 ## Documentation
 
 Documentation can be found in [Docs](Resources/doc/index.md)
+
+## License
+
+This bundle is released under the MIT license. See the complete license in the bundle:
+
+    Resources/meta/LICENSE
+
+Dojo Toolkit is released under its sepearate [license](http://dojotoolkit.org/license).
